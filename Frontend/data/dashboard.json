@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "logo": "/logo.svg",
+    "title": "QuickAid",
+    "links-center": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Emergency Request",
+        "path": "/dashboard/emergency-request"
+      },
+      { "name": "Nearby facilities ", "path": "/dashboard/nearby-facilities" },
+      { "name": "First aid", "path": "/dashboard/first-aid" },
+      { "name": "Help", "path": "/dashboard/Help" }
+    ],
+    "user": {
+      "avater": "/jpg/user.jpg",
+      "verified": "/svg/verified.svg"
+    }
+  },
+  "hero": {
+    "greet": "Welcome, ",
+    "p": "Find the nearest help in a Health Crisis",
+    "search": {
+      "placeholder": "Search for hospitals, clinics and emergency service...",
+      "button": "Find"
+    }
+  },
+  "emergency": {
+    "title": "Emergency Situation?",
+    "boxa": {
+      "title": "Select Emergency type",
+      "p": "Choose the type of emergency to find the most appropriate nearby facilities",
+      "placeholder": "Select emergency type",
+      "options": [
+        "Heart Attack / Chest Pain",
+        "Stroke",
+        "Difficulty Breathing / Asthma Attack",
+        "Unconscious / Fainting",
+        "Seizure",
+        "Allergic Reaction / Anaphylaxis",
+        "Severe Bleeding",
+        "Burns (Severe)",
+        "Poisoning / Overdose",
+        "Diabetic Emergency",
+        "High Fever (Children / Infants)"
+      ],
+      "h4": "Tap here to request help immediately",
+      "button": "Emergency call",
+      "icon1": "/svg/thumpDown.svg",
+      "icon2": "/svg/call.svg"
+    },
+    "boxb": {
+        "img": "/png/emergency.png"
+    }
+  },
+  "nearby": {
+    "title": "Nearby Healthcare Facilities",
+    "p": "Healthcare facilities near your current location"
+  },
+  "directions": [
+    {
+        "title": "General Hospital Odan, Lagos",
+        "p": "General • 1.2km 13b Adeyemi Layout, Ogudu, Lagos.  ",
+        "icon": "/svg/hospital.svg",
+        "button": {
+            "text": "Directions",
+            "icon": "/svg/direction.svg",
+            "to": ""
+        }
+    },
+    {
+        "title": "Reddington Hospital",
+        "p": "Cardiac, Optical • 1.2km 13b Adeyemi Layout, Ogudu, Lagos.  ",
+        "icon": "/svg/hospital.svg",
+        "button": {
+            "text": "Directions",
+            "icon": "/svg/direction.svg",
+            "to": ""
+        }
+    },
+    {
+        "title": "National Orthopaedic Hospital",
+        "p": "Gynecologic, Orthopaedic • 1.2km 13b Adeyemi Layout, Ogudu, Lagos.  ",
+        "icon": "/svg/hospital.svg",
+        "button": {
+            "text": "Directions",
+            "icon": "/svg/direction.svg",
+            "to": ""
+        }
+    }
+  ],
+  "tips": {
+    "title": "First Aid Tips",
+    "p": "Quick access to essential first aid information",
+    "cards": [
+        {
+            "img": "png/tip1.png",
+            "title": "Cuts and Scrapes",
+            "p": "Apply direct pressure with clean cloth or bandage, Elevate injured area above heart level if possible Clean wound gently with water once bleeding stops",
+            "button": {
+                "text": "Read more",
+                "icon": "/svg/arrowRight.svg"
+            }
+        },
+        {
+            "img": "png/tip2.png",
+            "title": "Choking",
+            "p": "Adults: Give 5 back blows between shoulder blades, then 5 abdominal thrusts (Heimlich maneuver)**",
+            "button": {
+                "text": "Read more",
+                "icon": "/svg/arrowRight.svg"
+            }
+        },
+        {
+            "img": "png/tip3.png",
+            "title": "Heart Attack",
+            "p": "Give aspirin if available and person is not allergic, Keep person calm and seated, loosen tight clothing Be ready to perform CPR if person becomes unconscious",
+            "button": {
+                "text": "Read more",
+                "icon": "/svg/arrowRight.svg"
+            }
+        }
+    ],
+    "more": {
+        "text": "View all first aid guide",
+        "to": "#"
+    }
+  },
+  "footer": {
+    "title": "Newsletter CTA",
+    "p": "Get access to our daily health tips and guide for free",
+    "form": {
+      "info": "Your email is safe with us. privacy policy",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
+    "logo": "/logo.svg",
+    "logoText": "QuickAid",
+    "links": [
+      { "name": "Home", "path": "/" },
+      { "name": "Emergency Request", "path": "/dashboard/emergency-request" },
+      { "name": "Nearby facilities ", "path": "/dashboard/nearby-facilities" },
+      { "name": "First aid", "path": "/dashboard/first-aid" },
+      { "name": "Help", "path": "/dashboard/Help" }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+#Hero{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    background-size: 57vw;
+}
+#Hero2{
+  background-image: url('/jpg/hero2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  #Hero {
+    background-image: url('/png/hero.png'); 
+    background-size: 55vw 650px;
+  }
+}
+
+#Dashbaord {
+  background-image: url('/png/emergencyBg.png');
+  background-repeat: no-repeat;
+ background-position: center 304.52px;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  #Hero {
+     background-size: 57vw 650px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #Hero {
+     background-size: 57vw 700px;
+  }
+}
+
+
+

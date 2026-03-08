@@ -1,0 +1,23 @@
+{
+    "features": {
+        "title": "Features of QuickAid",
+        "p": "Discover the tools that put safety, speed, and support at your fingertips. QuickAid makes handling emergencies simpler, smarter, and faster.",
+        "cards": [
+            {
+                "img": "/png/f1.png",
+                "h3": "Emergency Request System",
+                "p": "One-tap emergency button with smart categorization. Select your emergency type for faster, more targeted response from first responders."
+            },
+            {
+                "img": "/png/f2.png",
+                "h3": "Hospital/Facility Locator",
+                "p": "Interactive map showing nearby hospitals, clinics, and pharmacies with real-time availability, directions, and contact information."
+            },
+            {
+                "img": "/jpg/f3.jpg",
+                "h3": "First-Aid Guidance",
+                "p": "Step-by-step first-aid instructions for common emergencies, written in simple language that anyone can follow during critical moments."
+            }
+        ]
+    }
+}

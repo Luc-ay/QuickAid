@@ -1,31 +1,13 @@
 import { motion } from 'framer-motion';
-import { FaAmbulance, FaHospital, FaHeartbeat } from 'react-icons/fa';
+import jsonData from '/data/features.json';
+const features = jsonData.features;
 
 const Features = () => {
-  const features = [
-    {
-      icon: <FaAmbulance className="text-4xl text-coral-500" />,
-      title: "Emergency Request System",
-      description: "One-tap emergency button with smart categorization and instant connection to first responders in your area.",
-      image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      icon: <FaHospital className="text-4xl text-primary-500" />,
-      title: "Hospital/Facility Locator",
-      description: "Interactive map showing nearby hospitals, clinics, and emergency facilities with real-time availability.",
-      image: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      icon: <FaHeartbeat className="text-4xl text-green-500" />,
-      title: "First-Aid Guidance",
-      description: "Step-by-step first-aid instructions for common emergencies, written in simple language anyone can follow.",
-      image: "https://images.pexels.com/photos/7089391/pexels-photo-7089391.jpeg?auto=compress&cs=tinysrgb&w=600"
-    }
-  ];
+  
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-[43px] bg-[#F5F5F5] md:min-h-[1494px] ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -34,44 +16,44 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Features of QuickAid
+          <h2 className="font-jakarta text-4xl md:text-[32px] font-bold text-[#333333] mb-[11px]  ">
+           {features.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the tools that put safety, speed, and support at your fingertips. 
-            QuickAid makes handling emergencies simpler, smarter, and faster.
+          <p className="text-base font-sans font-normal px-4 md:px-0 text-[#333333] text-center md:max-w-[50%] mx-auto ">
+            {features.p}
           </p>
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid place-items-center md:grid-cols-1 gap-[24px]">
+          {features.cards.map((feature, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className={`overflow-hidden hover:shadow-xl transition-shadow duration-300 grid grid-cols-1 md:grid-cols-2 gap-[24px]  `}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className={`relative md:h-[415px] flexCenter shadow-md w-full md:max-w-[570px] rounded-[10px] overflow-hidden ${index%2==0 && "md:order-2"} `} >
                 <img
-                  src={feature.image}
-                  alt={feature.title}
+                  src={feature.img}
+                  alt={feature.h3}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading='lazy'
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
-                  {feature.icon}
-                </div>
+                
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {feature.title}
+              <div className={`p-6 flexCenter justify-start ps-[30px] bg-white shadow-md rounded-[10px] ${index%2==0 && "md:order-1"} `} >
+                <div className="md:max-w-[301px] mx-auto  ">
+                  <h3 className="font-jakarta text-[24px] text-center font-semibold text-[#333333] mb-4">
+                  {feature.h3}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
+                <p className="font-sans font-normal text-[20px] text-[#333333] leading-relaxed">
+                  {feature.p}
                 </p>
+                </div>
               </div>
             </motion.div>
           ))}

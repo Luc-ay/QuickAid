@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "logo": "/logo.svg",
+    "title": "QuickAid",
+    "links-center": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "About us",
+        "path": "/about"
+      },
+      { "name": "Contact us", "path": "/contact" },
+      { "name": "Services", "path": "/services" }
+    ],
+    "buttons": {
+      "login":{
+        "name": "Login",
+        "path": "/auth/login"
+      },
+     "signup": { "name": "Signup", "path": "/auth/signup" }
+  }
+  }
+}

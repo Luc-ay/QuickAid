@@ -1,92 +1,46 @@
 import { motion } from 'framer-motion';
+import '../components/styles.css'; // Import your styles;
+import jsonData from "/data/hero.json";
+import { useNavigate } from 'react-router-dom';
+const left = jsonData.left;
+
 
 const Hero = () => {
+  const redir = useNavigate();
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left Content */}
-          <motion.div
-            className="text-white space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
-              Emergency Help at Your Fingertips
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              QuickAid connects you instantly with first responders and healthcare 
-              facilities during emergencies. Get help fast, find nearby facilities, 
-              and access life-saving first-aid guidance.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                className="px-8 py-4 bg-coral-500 hover:bg-coral-600 text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Emergency help
-              </motion.button>
-              <motion.button
-                className="px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get started
-              </motion.button>
-            </div>
-
-            {/* Stats */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-8 pt-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div className="text-center sm:text-left">
-                <div className="text-4xl font-bold text-gray-900">24/7</div>
-                <div className="text-gray-700">Emergency Support</div>
+    <section id='Hero'  className="relative h-[550px] md:h-[720px] grid grid-cols-1 md:grid-cols-[450px_1fr] lg:grid-cols-[541px_1fr] 2xl:grid-cols-2 ">
+      {/* left */}
+      <div className="px-6 md:ps-[70px] md:max-w-[541px] flex flex-col items-center md:items-start  ">
+        <h2 className="flexColStart items-center md:items-start pt-[100px] md:pt-[172px] font-jakarta md:leading-[63.48px] font-bold text-[30px]  text-center md:text-left md:text-5xl text-nowrap text-[#333333] ">
+          <span className=""> {left.h2a} </span>
+          <span className=""> {left.h2b} </span>
+        </h2>
+        <p className="font-sans font-normal text-[#374151] text-center md:text-left text-base mt-4   "> {left.p} </p>
+        {/* cta */}
+        <div className="flexStart gap-[24px] mt-10 ">
+          {/* emargency */}
+          <button className='py-[10px] px-[25px] md:py-[19.5px]  md:px-[52px] text-nowrap rounded-[6px] bg-[#E53935] text-[white] flexCenter font-inter font-[500] text-[12px] ' onClick={()=> redir(left.buttons.red.path)}  aria-label="Request immediate emergency assistance" >
+            {left.buttons.red.text}
+          </button>
+          {/* get started */}
+          <button className='py-[10px] px-[25px] md:py-[19.5px]  md:px-[52px] text-nowrap rounded-[6px] bg-primary-500 text-[white] flexCenter font-inter font-[500] text-[12px] ' onClick={()=> redir(left.buttons.blue.path)}  aria-label="Get started with the sign-up process" >
+            {left.buttons.blue.text}
+          </button>
+        </div>
+        {/* stats */}
+        <div className="flexStart gap-[24px] mt-[42.95px] ">
+          {
+            left.stats.map((each,i)=>(
+              <div key={i} className="flexColStart gap-2 ">
+                <h3 className="font-bold text-[24px] font-inter text-[#333333] "> {each.number} </h3>
+                <p className="font-normal text-[12px] font-sans text-[#374151]"> {each.text} </p>
               </div>
-              <div className="text-center sm:text-left">
-                <div className="text-4xl font-bold text-gray-900">&lt;2min</div>
-                <div className="text-gray-700">Response Time</div>
-              </div>
-              <div className="text-center sm:text-left">
-                <div className="text-4xl font-bold text-gray-900">500+</div>
-                <div className="text-gray-700">Healthcare Partners</div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="relative z-10">
-              <img
-                src="https://images.pexels.com/photos/7089020/pexels-photo-7089020.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional healthcare worker"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-            </div>
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/20 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-          </motion.div>
+            ))
+          }
         </div>
       </div>
+      {/* right */}
+      <div id='Hero-img'  className=" hidden md:grid "></div>
     </section>
   );
 };

@@ -1,0 +1,30 @@
+{
+    "works":{
+        "title": "How QuickAid Works",
+        "p": "Getting help is simple and fast. Follow these three steps to access emergency assistance.",
+        "steps":  [
+    {
+      "number": "1",
+      "title": "Tap Emergency Button",
+      "description": "Press the emergency button and input your email address into our quick dialog box menu.",
+      "color": "bg-coral-500"
+    },
+    {
+      "number": "2", 
+      "title": "Automatic Dispatch",
+      "description": "Have an ambulance dispatched to you or you will receive directions to the nearest hospitals in your vicinity.",
+      "color": "bg-orange-500"
+    },
+    {
+      "number": "3",
+      "title": "Get Help Fast",
+      "description": "Receive immediate first-aid guidance while help is on the way. Track response status in real-time.",
+      "color": "bg-green-500"
+    }
+  ],
+  "button": {
+    "text": "Get Started",
+    "part": "/auth/signup"
+  }
+    }
+}

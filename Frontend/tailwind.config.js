@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'system-ui', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['"Open Sans"', 'sans-serif'], // overrides default
+        opensans: ['"Open Sans"', 'sans-serif'], // custom utility
       },
       colors: {
         primary: {
@@ -34,10 +37,13 @@ export default {
         coral: {
           500: '#FF6B6B',
           600: '#E74C3C',
-        }
+        },
+      },
+      screens: {
+        '950': '950px', // custom breakpoint
       },
       animation: {
-        'scroll': 'scroll 30s linear infinite',
+        scroll: 'scroll 30s linear infinite',
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'slide-up': 'slideUp 0.8s ease-out',
       },
@@ -53,8 +59,8 @@ export default {
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(40px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],

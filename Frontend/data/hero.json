@@ -1,0 +1,32 @@
+{
+    "left": {
+        "h2a": "Emergency Help at ",
+        "h2b": "Your Fingertips ",
+        "p": "QuickAid connects you instantly with first responders and healthcare facilities during emergencies. Get help fast, find nearby facilities, and access life-saving first-aid guidance.",
+        "buttons": {
+            "red": {
+                "text": "Emergency help",
+                "path": "#"
+            },
+            "blue": {
+                "text": "Get started",
+                "path": "/auth/login"
+            }
+
+        },
+        "stats": [
+            {
+                "number": "24/7 ",
+                "text": "Emergency Service"
+            },
+            {
+                "number": "<2min ",
+                "text": "Response Time"
+            },
+            {
+                "number": "500+ ",
+                "text": "Healthcare Partners"
+            }
+        ]
+    }
+}
